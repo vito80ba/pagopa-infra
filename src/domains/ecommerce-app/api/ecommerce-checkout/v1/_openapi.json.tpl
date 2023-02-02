@@ -197,7 +197,7 @@
     },
     "/transactions/{transactionId}": {
       "get": {
-        "operationId": "getTransactionInfo",
+        "operationId": "test",
         "parameters": [
           {
             "in": "path",
