@@ -7,15 +7,15 @@ resource "azurerm_resource_group" "rg_vnet" {
 }
 
 ## ResourceGroup DR Site
-resource "azurerm_resource_group" "rg_vnet" {
+resource "azurerm_resource_group" "rg_dr_vnet" {
   name     = format("%s-%s-vnet-rg", local.project, var.location_short_dr)
-  location = var.location
+  location = var.location_dr
 
   tags = var.tags
 }
 
 
-# vnet
+# vnet Primary Site
 module "vnet" {
   source               = "git::https://github.com/pagopa/azurerm.git//virtual_network?ref=v1.0.90"
   name                 = format("%s-vnet", local.project)
@@ -27,6 +27,17 @@ module "vnet" {
   tags = var.tags
 }
 
+# vnet DR Site
+module "vnet_dr" {
+  source               = "git::https://github.com/pagopa/azurerm.git//virtual_network?ref=v1.0.90"
+  name                 = format("%s-%s-vnet", local.project, var.location_short_dr)
+  location             = azurerm_resource_group.rg_dr_vnet.location
+  resource_group_name  = azurerm_resource_group.rg_dr_vnet.name
+  address_space        = var.cidr_dr_vnet
+  ddos_protection_plan = var.ddos_protection_plan
+
+  tags = var.tags
+}
 # vnet integration
 module "vnet_integration" {
   source               = "git::https://github.com/pagopa/azurerm.git//virtual_network?ref=v1.0.90"
