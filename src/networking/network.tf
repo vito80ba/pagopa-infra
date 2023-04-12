@@ -1,9 +1,19 @@
+## ResourceGroup Primary Site
 resource "azurerm_resource_group" "rg_vnet" {
   name     = format("%s-vnet-rg", local.project)
   location = var.location
 
   tags = var.tags
 }
+
+## ResourceGroup DR Site
+resource "azurerm_resource_group" "rg_vnet" {
+  name     = format("%s-%s-vnet-rg", local.project, var.location_short_dr)
+  location = var.location
+
+  tags = var.tags
+}
+
 
 # vnet
 module "vnet" {
