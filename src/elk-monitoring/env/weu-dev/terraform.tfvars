@@ -128,3 +128,8 @@ opentelemetry_operator_helm = {
   chart_version = "0.24.3"
   values_file   = "./env/opentelemetry_operator_helm/values.yaml"
 }
+
+kube_filebeat_helm = {
+  chart_version = "8.5.1"
+  values_file   = "./env/weu-dev/filebeat/values.yaml"
+}

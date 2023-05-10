@@ -226,3 +226,11 @@ variable "opentelemetry_operator_helm" {
   })
   description = "open-telemetry/opentelemetry-operator helm chart configuration"
 }
+
+variable "kube_filebeat_helm" {
+  type = object({
+    chart_version = string,
+    values_file   = string
+  })
+  description = "filebeat helm chart configuration"
+}
