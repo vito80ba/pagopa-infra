@@ -1,7 +1,7 @@
 <policies>
   <inbound>
     <base />
-    <set-backend-service base-url="https://${hostname}/pagopa-mocker/mocker" />
+    <set-backend-service base-url="https://${hostname}/pagopa-mock-config-be" />
   </inbound>
   <outbound>
     <base />
