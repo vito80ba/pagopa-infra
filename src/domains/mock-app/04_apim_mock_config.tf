@@ -28,7 +28,7 @@ module "apim_mock_config_api_v1" {
 
   content_format = "openapi"
   content_value = templatefile("./api/mock-config/v1/_openapi.json.tpl", {
-    host    = local.apim_hostname
+    host = local.apim_hostname
   })
 
   xml_content = templatefile("./api/mock-config/v1/_base_policy.xml", {
