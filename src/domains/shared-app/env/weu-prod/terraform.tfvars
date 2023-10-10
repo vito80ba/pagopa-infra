@@ -64,4 +64,4 @@ taxonomy_function_autoscale = {
 }
 
 
-app_service_storage_account_replication_type = "GZRS"
+function_app_storage_account_replication_type = "GZRS"

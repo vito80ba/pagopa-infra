@@ -117,4 +117,4 @@ fdr_json_to_xml_function_autoscale = {
   maximum = 10
 }
 
-app_service_storage_account_replication_type = "GZRS"
+function_app_storage_account_replication_type = "GZRS"
