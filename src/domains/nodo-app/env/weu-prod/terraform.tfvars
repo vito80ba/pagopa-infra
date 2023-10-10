@@ -146,3 +146,5 @@ nodo_re_to_tablestorage_function_autoscale = {
   minimum = 1
   maximum = 10
 }
+
+app_service_storage_account_replication_type = "GZRS"

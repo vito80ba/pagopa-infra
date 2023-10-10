@@ -62,3 +62,6 @@ taxonomy_function_autoscale = {
   minimum = 1
   maximum = 3
 }
+
+
+app_service_storage_account_replication_type = "GZRS"
