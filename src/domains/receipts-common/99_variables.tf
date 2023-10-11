@@ -211,3 +211,10 @@ variable "receipts_queue_delay_sec" {
   description = "The length of time during which the message will be invisible, starting when it is added to the queue."
   default     = 3600
 }
+
+
+variable "receipts_storage_account_replication_type" {
+  type = string
+  default = "LRS"
+  description = "(Optional) Receipts datastore storage account replication type"
+}

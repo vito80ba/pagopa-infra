@@ -659,3 +659,16 @@ node_forwarder_size            = "P1v3"
 # lb elk
 ingress_elk_load_balancer_ip = "10.1.100.251"
 
+
+function_app_storage_account_info = {
+    account_kind                      = "StorageV2"
+    account_tier                      = "Standard"
+    account_replication_type          = "GZRS"
+    access_tier                       = "Hot"
+    advanced_threat_protection_enable = true
+}
+
+
+logic_app_storage_account_replication_type = "GZRS"
+logos_donations_storage_account_replication_type = "GZRS"
+buyer_banks_storage_account_replication_type = "GZRS"

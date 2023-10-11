@@ -128,3 +128,5 @@ opentelemetry_operator_helm = {
   chart_version = "0.24.3"
   values_file   = "./env/opentelemetry_operator_helm/values.yaml"
 }
+
+snapshot_storage_replication_type = "GZRS"

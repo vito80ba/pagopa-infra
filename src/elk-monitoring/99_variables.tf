@@ -242,3 +242,9 @@ variable "elk_snapshot_delete_retention_days" {
   description = "Number of days to retain deleted."
   default     = 30
 }
+
+variable "snapshot_storage_replication_type" {
+  type = string
+  default = "LRS"
+  description = "(Optional) ELK snapshot storage replication type"
+}
