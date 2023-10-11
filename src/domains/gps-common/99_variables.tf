@@ -333,7 +333,7 @@ variable "enable_iac_pipeline" {
 
 
 variable "storage_account_replication_type" {
-  type = string
-  default = "LRS"
+  type        = string
+  default     = "LRS"
   description = "(Optional) Fn app storage acocunt replication type"
 }

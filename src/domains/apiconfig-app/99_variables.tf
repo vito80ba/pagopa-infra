@@ -216,3 +216,9 @@ variable "ica_cron_schedule" {
   description = "ICA cron scheduling (NCRON example '*/35 * * * * *')"
   default     = "0 0 0 * * *"
 }
+
+variable "cdn_storage_account_replication_type" {
+  type        = string
+  default     = "GRS"
+  description = "(Optional) Cdn storage account replication type"
+}

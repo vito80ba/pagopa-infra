@@ -115,8 +115,8 @@ app_gateway_deny_paths = [
   "/payment-manager/db-logging/.*",
   "/payment-manager/payment-gateway/.*",
   "/payment-manager/internal*",
-#  "/payment-manager/pm-per-nodo/.*", # non serve in quanto queste API sono con subkey required 🔐 APIM-for-Node
-#  "/checkout/io-for-node/.*", # non serve in quanto queste API sono con subkey required 🔐 APIM-for-Node
+  #  "/payment-manager/pm-per-nodo/.*", # non serve in quanto queste API sono con subkey required 🔐 APIM-for-Node
+  #  "/checkout/io-for-node/.*", # non serve in quanto queste API sono con subkey required 🔐 APIM-for-Node
   #"/gpd-payments/.*", # non serve in quanto queste API sono con subkey required 🔐 APIM-for-Node
   "/tkm/tkmcardmanager/.*",
   "/tkm/tkmacquirermanager/.*",
@@ -661,14 +661,16 @@ ingress_elk_load_balancer_ip = "10.1.100.251"
 
 
 function_app_storage_account_info = {
-    account_kind                      = "StorageV2"
-    account_tier                      = "Standard"
-    account_replication_type          = "GZRS"
-    access_tier                       = "Hot"
-    advanced_threat_protection_enable = true
+  account_kind                      = "StorageV2"
+  account_tier                      = "Standard"
+  account_replication_type          = "GZRS"
+  access_tier                       = "Hot"
+  advanced_threat_protection_enable = true
 }
 
 
-logic_app_storage_account_replication_type = "GZRS"
+logic_app_storage_account_replication_type       = "GZRS"
 logos_donations_storage_account_replication_type = "GZRS"
-buyer_banks_storage_account_replication_type = "GZRS"
+buyer_banks_storage_account_replication_type     = "GZRS"
+cdn_storage_account_replication_type             = "GZRS"
+backup_storage_replication_type                  = "GZRS"

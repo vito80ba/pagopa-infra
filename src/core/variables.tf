@@ -1579,19 +1579,19 @@ variable "apim_fdr_nodo_pagopa_enable" {
 
 
 variable "logic_app_storage_account_replication_type" {
-  type = string
-  default = "LRS"
+  type        = string
+  default     = "LRS"
   description = "(Optional) Storage account replication type used for function apps"
 }
 
 
 variable "function_app_storage_account_info" {
   type = object({
-    account_kind                      = optional(string,"StorageV2" )
-    account_tier                      = optional(string,"Standard" )
-    account_replication_type          = optional(string,"LRS" )
-    access_tier                       = optional(string,"Hot" )
-    advanced_threat_protection_enable = optional(bool,  true)
+    account_kind                      = optional(string, "StorageV2")
+    account_tier                      = optional(string, "Standard")
+    account_replication_type          = optional(string, "LRS")
+    access_tier                       = optional(string, "Hot")
+    advanced_threat_protection_enable = optional(bool, true)
   })
 
   default = {
@@ -1605,13 +1605,25 @@ variable "function_app_storage_account_info" {
 
 
 variable "logos_donations_storage_account_replication_type" {
-  type = string
-  default = "LRS"
+  type        = string
+  default     = "LRS"
   description = "(Optional) Logos donations storage account replication type"
 }
 
 variable "buyer_banks_storage_account_replication_type" {
-  type = string
-  default = "LRS"
+  type        = string
+  default     = "LRS"
   description = "(Optional) Buyer banks storage account replication type"
+}
+
+variable "cdn_storage_account_replication_type" {
+  type        = string
+  default     = "GRS"
+  description = "(Optional) Cdn storage account replication type"
+}
+
+variable "backup_storage_replication_type" {
+  type        = string
+  default     = "GRS"
+  description = "(Optional) Backup storage account replication type"
 }

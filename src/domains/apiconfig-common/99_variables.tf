@@ -151,7 +151,7 @@ variable "api_config_reporting_delete_retention_days" {
 
 
 variable "api_config_replication_type" {
-  type = string
-  default = "LRS"
+  type        = string
+  default     = "LRS"
   description = "(Optional) Api config storage account replication type"
 }

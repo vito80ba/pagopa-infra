@@ -404,7 +404,7 @@ variable "fdr_json_to_xml_function_autoscale" {
 }
 
 variable "function_app_storage_account_replication_type" {
-  type = string
-  default = "ZRS"
+  type        = string
+  default     = "ZRS"
   description = "(Optional) Storage account replication type used for function apps"
 }

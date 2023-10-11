@@ -138,3 +138,9 @@ variable "robots_indexed_paths" {
   type        = list(string)
   description = "List of cdn paths to allow robots index"
 }
+
+variable "selfcare_storage_replication_type" {
+  type        = string
+  default     = "GRS"
+  description = "(Optional) Selfcare cdn storage account replication type"
+}

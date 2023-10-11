@@ -244,7 +244,7 @@ variable "elk_snapshot_delete_retention_days" {
 }
 
 variable "snapshot_storage_replication_type" {
-  type = string
-  default = "LRS"
+  type        = string
+  default     = "LRS"
   description = "(Optional) ELK snapshot storage replication type"
 }

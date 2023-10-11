@@ -71,5 +71,5 @@ apiconfig_storage_params = {
 
 storage_private_endpoint_enabled = false
 
-enable_iac_pipeline = true
+enable_iac_pipeline         = true
 api_config_replication_type = "GZRS"
