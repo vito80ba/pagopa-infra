@@ -24,8 +24,7 @@ ingress_load_balancer_ip = "10.1.100.250"
 
 cidr_subnet_mock_ec              = ["10.1.137.0/29"]
 cidr_subnet_mock_payment_gateway = ["10.1.137.8/29"]
-cidr_subnet_dbms                 = ["10.1.180.0/24"]
-cidr_subnet_pgflex_dbms          = ["10.1.181.0/24"]
+cidr_subnet_pgflex_dbms          = ["10.1.188.0/24"]
 
 external_domain          = "pagopa.it"
 dns_zone_prefix          = "dev.platform"
