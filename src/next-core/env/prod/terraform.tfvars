@@ -32,7 +32,5 @@ dns_zone_internal_prefix = "internal.platform"
 #
 cidr_subnet_dns_forwarder_backup = ["10.1.251.0/29"]
 
-dns_forwarder_backup_is_enabled = {
-  prod = true
-}
+dns_forwarder_backup_is_enabled = true
 dns_forwarder_vm_image_name = "pagopa-p-dns-forwarder-ubuntu2204-image-v1"
